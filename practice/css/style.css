@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 16px;
     background:
         radial-gradient(circle at top left, rgba(35, 134, 255, 0.22), transparent 34%),
         radial-gradient(circle at bottom right, rgba(255, 122, 89, 0.18), transparent 32%),
@@ -19,8 +19,8 @@ body {
 }
 
 .calculator {
-    width: min(360px, 100%);
-    padding: 22px;
+    width: min(410px, 100%);
+    padding: 26px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
     background: rgba(17, 24, 39, 0.78);
@@ -32,10 +32,10 @@ body {
 
 .display {
     width: 100%;
-    min-height: 82px;
+    min-height: 96px;
     background: linear-gradient(180deg, #f8fafc, #e8edf5);
     color: #111827;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -43,11 +43,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 16px 18px;
-    margin-bottom: 18px;
-    overflow: auto;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    overflow: hidden;
     text-align: right;
-    word-break: break-word;
+    white-space: nowrap;
+    word-break: normal;
     box-shadow:
         inset 0 2px 8px rgba(15, 23, 42, 0.12),
         0 10px 24px rgba(0, 0, 0, 0.18);
@@ -56,15 +57,15 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 14px;
 }
 
 button {
-    min-height: 58px;
-    padding: 14px;
+    min-height: 66px;
+    padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 700;
     background: rgba(255, 255, 255, 0.08);
     color: #f8fafc;
@@ -125,24 +126,30 @@ button:nth-child(12):hover {
 }
 
 @media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
     .calculator {
-        padding: 18px;
+        width: 100%;
+        padding: 22px;
         border-radius: 20px;
     }
 
     .display {
-        min-height: 74px;
-        font-size: 20px;
+        min-height: 94px;
+        font-size: 24px;
+        padding: 18px;
     }
 
     .buttons {
-        gap: 9px;
+        gap: 11px;
     }
 
     button {
-        min-height: 52px;
-        padding: 12px;
+        min-height: 64px;
+        padding: 14px;
         border-radius: 14px;
-        font-size: 17px;
+        font-size: 20px;
     }
 }
