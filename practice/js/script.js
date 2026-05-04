@@ -13,7 +13,6 @@ function clearDisplay() {
 function calculate() {
     if (input === "") return;
     
-    // kahit anong input → same output 😂
     document.getElementById("display").innerText = "Nagkaon kana mo lab? ";
     
     input = "";
